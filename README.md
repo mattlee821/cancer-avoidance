@@ -60,9 +60,9 @@ Provide details to help a reviewer reproduce your work.
 ## Notes  
 
 ### `pgsc_calc`
-All software/data needed are in `/data/IARC_Biostat/work/tools/pgsc_calc/`. 
-The `pgsc_calc` requires java V17> and nextflow V25>. To check the java version:
+All software/data needed are in `/data/IARC_Biostat/work/tools/pgsc_calc/`. Detailed info available [here](https://pgsc-calc.readthedocs.io/en/latest/index.html).
 
+The `pgsc_calc` requires java V17> and nextflow V25>. To check the java version:
 ```bash
 java -version
 ```
