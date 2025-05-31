@@ -63,31 +63,31 @@ Provide details to help a reviewer reproduce your work.
 All software/data needed are in `/data/IARC_Biostat/work/tools/pgsc_calc/`. 
 The `pgsc_calc` requires java V17> and nextflow V25>. To check the java version:
 
-```
+```bash
 java -version
 ```
 
 You can download openJDK and extract as
-```
+```bash
 cd /data/IARC_Biostat/work/tools/pgsc_calc/
 wget https://download.java.net/java/GA/jdk24.0.1/24a58e0e276943138bf3e963e6291ac2/9/GPL/openjdk-24.0.1_linux-x64_bin.tar.gz
 tar -xzf openjdk-24.0.1_linux-x64_bin.tar.gz
 ```
 
 Then you can assign to your PATH (needs to be done for all submission jobs)
-```
+```bash
 export JAVA_HOME=/data/IARC_Biostat/work/tools/pgsc_calc/jdk-24.0.1
 export PATH="$JAVA_HOME/bin:$PATH"
 ```
 
 Now you can download the msot recent nextflow
-```
+```bash
 cd /data/IARC_Biostat/work/tools/pgsc_calc/
 curl -fsSL get.nextflow.io | bash
 ```
 
 Finally you can run the test `pgsc_calc` profile. This will take a while as it does installs the first time.
-```
+```bash
 cd /data/IARC_Biostat/work/tools/pgsc_calc/
 nextflow run pgscatalog/pgsc_calc \
 	-profile test,singularity \
@@ -96,7 +96,7 @@ nextflow run pgscatalog/pgsc_calc \
 The output will be in `/data/IARC_Biostat/work/tools/pgsc_calc/work/test-results/`. If there were no errors and it worked you can check the report `work/test-results/cineca/score/report.html`. If it doesnt work then go to the github and see if anyone has had similar issues...
 
 It is also useful to download the available reference data so you can do ancestry correction when calculating the scores:
-```
+```bash
 cd /data/IARC_Biostat/work/tools/pgsc_calc/
 wget https://ftp.ebi.ac.uk/pub/databases/spot/pgs/resources/pgsc_HGDP+1kGP_v1.tar.zst
 ```
